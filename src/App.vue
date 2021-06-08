@@ -7,9 +7,15 @@
           <router-link to="/"><div class="logo">WB</div></router-link>
         </div>
         <div class="separate-links">
-          <router-link to="/about">About</router-link>
-          <router-link to="/writingexamples">Writing Examples</router-link>
-          <router-link to="/contact">Contact</router-link>
+          <div class="main-nav-link">
+            <router-link to="/about">About</router-link>
+          </div>
+          <div class="main-nav-link">
+            <router-link to="/writingexamples">Writing Examples</router-link>
+          </div>
+          <div class="main-nav-link">
+            <router-link to="/contact">Contact</router-link>
+          </div>
         </div>
         <div class="contact-links">
           <a href="#">Email</a>
@@ -52,7 +58,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: 25px;
   width: 25%;
   background-color: #1e2022;
   height: calc(100vh - 100px);
@@ -63,11 +68,24 @@ body {
   text-decoration: none;
 }
 
+.main-nav-link {
+  padding-bottom: 20px;
+}
+
 .nav .separate-links a {
-  display: inline;
   color: #c9d6df;
   margin-bottom: 25px;
   text-decoration: none;
+  padding-bottom: 1px;
+}
+
+.separate-links a {
+  font-size: 25px;
+  border-bottom: 2px solid transparent;
+}
+
+.separate-links .router-link-active {
+  border-bottom: 2px solid #c9d6df;
 }
 
 .logo-container {
@@ -89,9 +107,6 @@ body {
 }
 
 .separate-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   padding-left: 60px;
   margin-top: 25px;
 }
@@ -114,5 +129,58 @@ body {
   width: 100%;
   background-image: url("./assets/typing.jpeg");
   background-size: cover;
+}
+
+@media only screen and (max-width: 1440px) {
+  .nav {
+    width: 30%;
+  }
+
+  .separate-links a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+
+  .logo {
+    height: 75px;
+    width: 75px;
+    font-size: 40px;
+    line-height: 90px;
+    margin-top: 0;
+    margin-left: 25px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    flex-direction: row;
+    height: 100px;
+  }
+
+  .separate-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav-link {
+    margin-right: 15px;
+  }
+
+  .contact-links {
+    text-align: right;
+    margin: 15px 15px 15px auto;
+  }
+
+  .hero {
+    height: calc(100vh - 100px);
+  }
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="about">
     <div class="about-header">About Me</div>
-    <div class="image-container">
-      <img src="../assets/wallace-headshot.jpeg" />
-    </div>
     <div class="about-text">
+      <div class="image-container">
+        <img src="../assets/wallace-headshot.jpeg" />
+      </div>
       Thanks for visiting wallaceburgess.com! Here you'll find a sampling of my
       writing over the last four years, including blog posts, sociology papers,
       Op-Ed pieces, research projects, and essay writing.
@@ -42,20 +42,20 @@
 }
 
 .image-container img {
-  position: absolute;
-  left: 80%;
+  float: right;
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  padding: 5px;
 }
 
 .about-text {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #fff;
-  width: 60%;
-  margin: 25px 0 0 50px;
+  width: 90%;
+  margin: 25px auto 0 auto;
   padding: 20px;
-  font-size: 16px;
+  font-size: 20px;
   box-shadow: #000 10px 10px 25px;
 }
 </style>

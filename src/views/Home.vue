@@ -20,7 +20,7 @@
   font-family: "Fjalla One", sans-serif;
   color: #1e2022;
   margin-left: 25px;
-  font-size: 5.5vw;
+  font-size: 5vw;
   text-align: center;
   margin-bottom: 25px;
 }
@@ -33,5 +33,26 @@
   color: #f0f5f9;
   border: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1440px) {
+  .hero-text {
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-container {
+    padding-left: 0;
+    width: 100%;
+    height: 70vh;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-text {
+    font-size: 7vw;
+  }
 }
 </style>
