@@ -18,13 +18,23 @@
           </div>
         </div>
         <div class="contact-links">
-          <a href="#">Email</a>
+          <div><a href="#">Email</a></div>
+          <div><a href="#">LinkedIn</a></div>
           <p>Phone: (###)###-####</p>
-          <a href="#">LinkedIn</a>
         </div>
       </div>
       <div class="hero">
         <router-view> </router-view>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#">Email</a>
+        <a href="#">LinkedIn</a>
+        <p>Phone: (###)###-####</p>
+      </div>
+      <div>
+        Website by <a href="https://www.nickmoffitt.com">Nick Moffitt</a>
       </div>
     </div>
   </div>
@@ -42,6 +52,7 @@ body {
 
 .row {
   display: flex;
+  height: calc(100vh - 150px);
 }
 
 .header {
@@ -60,8 +71,12 @@ body {
   justify-content: flex-start;
   width: 25%;
   background-color: #1e2022;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   font-family: "Josefin Sans", sans-serif;
+}
+
+.separate-links a:hover {
+  border-bottom: 2px solid #c9d6df;
 }
 
 .nav .logo-container a {
@@ -111,24 +126,66 @@ body {
   margin-top: 25px;
 }
 
-.contact-links {
-  margin: auto 0 25px 60px;
+.contact-links div {
+  margin-bottom: 15px;
 }
 
 .nav .contact-links a {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
+
+.nav .contact-links a:hover {
+  border-bottom: 2px solid #fff;
+}
+
 .contact-links {
+  display: flex;
+  flex-direction: column;
   color: #fff;
   font-size: 16px;
+  margin: auto 0 25px 60px;
+}
+
+.contact-links p {
+  margin: 0;
 }
 
 .hero {
   width: 100%;
   background-image: url("./assets/typing.jpeg");
   background-size: cover;
+}
+
+.footer {
+  height: 50px;
+  background-color: #1e2022;
+  text-align: center;
+  color: #c9d6df;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 48px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #c9d6df;
+  border-bottom: 2px solid transparent;
+}
+
+.footer a:hover {
+  border-bottom: 2px solid #c9d6df;
+}
+
+.footer-links {
+  display: none;
+  color: #fff;
+}
+
+.footer-links a {
+  color: #fff;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -157,6 +214,7 @@ body {
 
   .row {
     flex-direction: column;
+    height: auto;
   }
 
   .nav {
@@ -166,8 +224,11 @@ body {
   }
 
   .separate-links {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    padding-left: 0;
   }
 
   .main-nav-link {
@@ -175,12 +236,30 @@ body {
   }
 
   .contact-links {
-    text-align: right;
-    margin: 15px 15px 15px auto;
+    display: none;
   }
 
   .hero {
-    height: calc(100vh - 100px);
+    height: auto;
+    height: calc(100vh - 150px);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+
+  .footer-links {
+    display: block;
+  }
+
+  .footer-links a {
+    margin-right: 10px;
+  }
+
+  .footer-links p {
+    display: inline;
   }
 }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div class="hero-container">
     <div class="hero-text">Job Title. Example Text. Whatever You Want.</div>
-    <a href="#"><button class="about-button">About Wallace</button></a>
+    <router-link to="/about"
+      ><button class="about-button">About Wallace</button></router-link
+    >
   </div>
 </template>
 
@@ -20,7 +22,7 @@
   font-family: "Fjalla One", sans-serif;
   color: #1e2022;
   margin-left: 25px;
-  font-size: 5vw;
+  font-size: 4.5vw;
   text-align: center;
   margin-bottom: 25px;
 }
@@ -37,7 +39,7 @@
 
 @media only screen and (max-width: 1440px) {
   .hero-text {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 }
 
@@ -45,8 +47,9 @@
   .hero-container {
     padding-left: 0;
     width: 100%;
-    height: 70vh;
+    height: calc(100vh - 200px);
     justify-content: flex-end;
+    margin-bottom: 50px;
   }
 }
 
