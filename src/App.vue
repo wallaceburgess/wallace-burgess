@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header">Wallace Burgess</div>
     <div class="row">
-      <div class="nav">
+      <div class="nav collapse navbar-collapse" id="navbar">
         <div class="logo-container">
           <router-link to="/"><div class="logo">WB</div></router-link>
         </div>
@@ -33,7 +33,7 @@
         <a href="#">LinkedIn</a>
         <p>Phone: (###)###-####</p>
       </div>
-      <div>
+      <div class="web-author">
         Website by <a href="https://www.nickmoffitt.com">Nick Moffitt</a>
       </div>
     </div>
@@ -260,6 +260,22 @@ body {
 
   .footer-links p {
     display: inline;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .footer {
+    justify-content: center;
+  }
+
+  .web-author {
+    display: none;
   }
 }
 </style>

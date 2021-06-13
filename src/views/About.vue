@@ -46,7 +46,7 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 10px;
 }
 
 .about-text {
@@ -57,5 +57,24 @@
   padding: 20px;
   font-size: 20px;
   box-shadow: #000 10px 10px 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .about-text {
+    width: auto;
+    margin: 25px 15px 50px 15px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
 }
 </style>
