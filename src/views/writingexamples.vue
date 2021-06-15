@@ -44,7 +44,7 @@
 </style>
 
 <script>
-import axios from "axios";
+import EventService from "@/services/EventService.js";
 
 export default {
   data() {
@@ -52,15 +52,10 @@ export default {
       articles: null,
     };
   },
-  created() {
-    axios
-      .get("http://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3")
-      .then((response) => {
-        console.log("events:", response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  mounted() {
+    EventService.getArticles().then((response) => {
+      this.articles = response.data;
+    });
   },
 };
 </script>
