@@ -1,0 +1,25 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "title": "Hip-Hop Sneaker Collaborations",
+            "date": "May 1, 2020",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a augue ut magna pellentesque consequat ut a tellus. Suspendisse ac dignissim quam, ut feugiat massa. Etiam aliquet turpis nec vehicula convallis. Donec et justo tortor. Ut pretium tellus in arcu convallis, ac pellentesque lorem pretium.",
+            "content": "What’s the most expensive pair of shoes you’ve ever bought? $150 running shoes that you wore until they fell apart? $250 Italian leather loafers? How about a used pair of the Air Yeezy 2s for $4,600? (“Air Yeezy 2 Solar Red”). I hope you’re a size 13. As absurd as that price tag sounds, these are not just a pair of expensive shoes. That’s because the Air Yeezy 2 is rapper Kanye West’s second collaboration with the sneaker brand Nike and is a perfect example of how popular the collaborations between hip-hop figures and shoe compa- nies are. Although it was once unusual for hip-hop artists to negotiate a deal to brand and design sneakers, such joint efforts have resulted in some of the most coveted and highly-priced shoes in the world. According to Stephen Albertini’s “An Abridged History of Hip-Hop’s Relationship with Sneaker Culture,” it all started in the mid-1980s with Run-DMC. Adidas executives recognized "
+        },
+        {
+            "id": 2,
+            "title": "The Conversations We Won’t Have",
+            "date": "2019",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a augue ut magna pellentesque consequat ut a tellus. Suspendisse ac dignissim quam, ut feugiat massa. Etiam aliquet turpis nec vehicula convallis. Donec et justo tortor. Ut pretium tellus in arcu convallis, ac pellentesque lorem pretium.",
+            "content": "Make a right at the Stop & Shop. Park a safe distance away. Keep your head down when you walk in, but make sure nobody you know sees you. Ask the woman at the front desk to make sure it will not show up on the insurance bill. Pay in cash. Hide the prescription. Hide the pills."
+        },
+        {
+            "id": 3,
+            "title": "The Conversations We Won’t Have",
+            "date": "2019",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a augue ut magna pellentesque consequat ut a tellus. Suspendisse ac dignissim quam, ut feugiat massa. Etiam aliquet turpis nec vehicula convallis. Donec et justo tortor. Ut pretium tellus in arcu convallis, ac pellentesque lorem pretium.",
+            "content": "Make a right at the Stop & Shop. Park a safe distance away. Keep your head down when you walk in, but make sure nobody you know sees you. Ask the woman at the front desk to make sure it will not show up on the insurance bill. Pay in cash. Hide the prescription. Hide the pills."
+        }
+    ]
+}

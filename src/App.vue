@@ -11,7 +11,7 @@
             <router-link to="/about">About</router-link>
           </div>
           <div class="main-nav-link">
-            <router-link to="/writingexamples">Writing Examples</router-link>
+            <router-link to="/writing-examples">Writing Examples</router-link>
           </div>
           <div class="main-nav-link">
             <router-link to="/contact">Contact</router-link>
