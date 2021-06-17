@@ -21,13 +21,15 @@ const routes = [
   },
   {
     path: "/writing-examples",
-    name: "writing-examples",
+    name: "WritingExamples",
+    props: route => ({ page: parseInt(route.query.page) || 1 }),
     component: WritingExamples,
   },
   {
-    path: "writing-examples/:id",
+    path: "/writing-examples/:id",
+    name: "Article",
+    props: true,
     component: Article,
-    props: true
   },
   {
     path: "/contact",

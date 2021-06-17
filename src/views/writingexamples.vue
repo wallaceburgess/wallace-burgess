@@ -1,11 +1,29 @@
 <template>
   <div class="writing-examples-container">
     <div class="examples-header">Writing Examples</div>
-    <div v-for="article in articles" :key="article.id" class="article-item">
-      <div class="article-title">{{ article.title }}</div>
-      <div class="article-date">{{ article.date }}</div>
-      <div class="article-description">{{ article.description }}</div>
-    </div>
+    <router-link
+      :to="{ name: 'Article', params: { id: article.id } }"
+      v-for="article in articles"
+      :key="article.id"
+    >
+      <div class="article-item">
+        <div class="article-title">{{ article.title }}</div>
+        <div class="article-date">{{ article.date }}</div>
+        <div class="article-description">{{ article.description }}</div>
+      </div>
+    </router-link>
+    <router-link
+      :to="{ name: 'WritingExamples', query: { page: page - 1 } }"
+      rel="prev"
+      v-if="page != 1"
+      >Previous</router-link
+    >
+    <router-link
+      :to="{ name: 'WritingExamples', query: { page: page + 1 } }"
+      rel="next"
+      v-if="hasNextPage"
+      >Next</router-link
+    >
   </div>
 </template>
 
@@ -20,6 +38,11 @@
   color: #1e2022;
   font-family: "Fjalla One", sans-serif;
   margin: 25px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .article-item {
@@ -47,15 +70,27 @@
 import EventService from "@/services/EventService.js";
 
 export default {
+  name: "WritingExamples",
+  props: ["page"],
   data() {
     return {
       articles: null,
+      totalEvents: 0,
     };
   },
-  mounted() {
-    EventService.getArticles().then((response) => {
+  created() {
+    this.articles = null;
+    EventService.getArticles(1, this.page).then((response) => {
       this.articles = response.data;
+      this.totalEvents = response.headers["x-total-count"];
     });
+  },
+  computed: {
+    hasNextPage() {
+      var totalPages = Math.ceil(this.totalEvents / 1);
+
+      return this.page < totalPages;
+    },
   },
 };
 </script>

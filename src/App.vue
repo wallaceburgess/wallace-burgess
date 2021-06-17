@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="hero">
-        <router-view> </router-view>
+        <router-view :key="$route.fullPath"> </router-view>
       </div>
     </div>
     <div class="footer">
@@ -52,7 +52,6 @@ body {
 
 .row {
   display: flex;
-  height: calc(100vh - 150px);
 }
 
 .header {
@@ -71,7 +70,6 @@ body {
   justify-content: flex-start;
   width: 25%;
   background-color: #1e2022;
-  height: calc(100vh - 150px);
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -155,6 +153,7 @@ body {
 
 .hero {
   width: 100%;
+  min-height: calc(100vh - 150px);
   background-image: url("./assets/typing.jpeg");
   background-size: cover;
 }
@@ -239,11 +238,6 @@ body {
     display: none;
   }
 
-  .hero {
-    height: auto;
-    height: calc(100vh - 150px);
-  }
-
   .footer {
     display: flex;
     justify-content: space-between;
@@ -264,18 +258,43 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  .hero {
-    height: auto;
-  }
 }
 
 @media only screen and (max-width: 640px) {
+  .nav {
+    position: fixed;
+    top: 0;
+  }
+
+  .hero {
+    margin-top: 100px;
+  }
+
   .footer {
     justify-content: center;
   }
 
   .web-author {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .logo {
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    line-height: 60px;
+    margin-top: 0;
+    margin-left: 15px;
+  }
+
+  .separate-links a {
+    font-size: 4vw;
+  }
+
+  .footer {
+    font-size: 4vw;
   }
 }
 </style>
