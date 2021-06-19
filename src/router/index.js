@@ -22,8 +22,8 @@ const routes = [
   {
     path: "/writing-examples",
     name: "WritingExamples",
-    props: route => ({ page: parseInt(route.query.page) || 1 }),
     component: WritingExamples,
+    props: route => ({ page: parseInt(route.query.page) || 1 }),
   },
   {
     path: "/writing-examples/:id",
