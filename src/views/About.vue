@@ -34,11 +34,15 @@
   </div>
 </template>
 <style scoped>
+.about {
+  width: 90%;
+  margin: 0 auto;
+}
 .about-header {
   font-size: 50px;
-  color: #1e2022;
+  color: #f0f5f9;
   font-family: "Fjalla One", sans-serif;
-  margin: 25px 0 0 50px;
+  margin-top: 25px;
 }
 
 .image-container img {
@@ -52,14 +56,18 @@
 .about-text {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #fff;
-  width: 90%;
-  margin: 25px auto 0 auto;
+  margin: 25px auto;
   padding: 20px;
-  font-size: 20px;
+  font-size: 18px;
   box-shadow: #000 10px 10px 25px;
 }
 
 @media only screen and (max-width: 767px) {
+  .about-header {
+    font-size: 36px;
+    text-align: center;
+    margin: 25px 0;
+  }
   .about-text {
     width: auto;
     margin: 25px 15px 50px 15px;

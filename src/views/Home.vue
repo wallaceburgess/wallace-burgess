@@ -20,7 +20,7 @@
 
 .hero-text {
   font-family: "Fjalla One", sans-serif;
-  color: #1e2022;
+  color: #f0f5f9;
   margin-left: 25px;
   font-size: 4.5vw;
   text-align: center;

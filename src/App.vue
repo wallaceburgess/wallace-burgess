@@ -18,9 +18,11 @@
           </div>
         </div>
         <div class="contact-links">
-          <div><a href="#">Email</a></div>
-          <div><a href="#">LinkedIn</a></div>
-          <p>Phone: (###)###-####</p>
+          <div><a href="mailto:wallaceburgess13@gmail.com">Email</a></div>
+          <div>
+            <a href="https://www.linkedin.com/in/wallace-burgess/">LinkedIn</a>
+          </div>
+          <p>Phone: (802)999-0928</p>
         </div>
       </div>
       <div class="hero">
@@ -29,9 +31,9 @@
     </div>
     <div class="footer">
       <div class="footer-links">
-        <a href="#">Email</a>
-        <a href="#">LinkedIn</a>
-        <p>Phone: (###)###-####</p>
+        <a href="mailto:wallaceburgess13@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/wallace-burgess/">LinkedIn</a>
+        <p>Phone: (802)999-0928</p>
       </div>
       <div class="web-author">
         Website by <a href="https://www.nickmoffitt.com">Nick Moffitt</a>
@@ -156,6 +158,7 @@ body {
   min-height: calc(100vh - 150px);
   background-image: url("./assets/typing.jpeg");
   background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
 }
 
 .footer {
@@ -257,13 +260,11 @@ body {
   }
 }
 
-@media only screen and (max-width: 767px) {
-}
-
 @media only screen and (max-width: 640px) {
   .nav {
     position: fixed;
     top: 0;
+    z-index: 10;
   }
 
   .hero {

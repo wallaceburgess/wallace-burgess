@@ -17,9 +17,16 @@
 
 .examples-header {
   font-size: 50px;
-  color: #1e2022;
+  color: #f0f5f9;
   font-family: "Fjalla One", sans-serif;
   margin: 25px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .examples-header {
+    font-size: 36px;
+    text-align: center;
+  }
 }
 </style>
 
@@ -29,7 +36,6 @@ import EventService from "@/services/EventService.js";
 
 export default {
   name: "WritingExamples",
-  props: ["page"],
   components: {
     ArticleItem,
   },
@@ -39,7 +45,7 @@ export default {
     };
   },
   created() {
-    EventService.getArticles(3, this.page).then((response) => {
+    EventService.getArticles().then((response) => {
       this.articles = response.data;
     });
   },

@@ -5,6 +5,8 @@ import About from "../views/About.vue"
 import WritingExamples from "../views/WritingExamples.vue"
 import Article from "../views/Article.vue"
 import Contact from "../views/Contact.vue"
+import SubmissionSuccess from '../views/SubmissionSuccess'
+import SubmissionFail from '../views/SubmissionFail'
 
 Vue.use(VueRouter);
 
@@ -23,7 +25,6 @@ const routes = [
     path: "/writing-examples",
     name: "WritingExamples",
     component: WritingExamples,
-    props: route => ({ page: parseInt(route.query.page) || 1 }),
   },
   {
     path: "/writing-examples/:id",
@@ -36,6 +37,16 @@ const routes = [
     name: "contact",
     component: Contact,
   },
+  {
+    path: '/thanks',
+    name: 'success',
+    component: SubmissionSuccess
+  },
+  {
+    path: '/404',
+    name: 'fail',
+    component: SubmissionFail
+  }
 ];
 
 const router = new VueRouter({
