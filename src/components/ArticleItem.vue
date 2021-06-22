@@ -40,6 +40,17 @@ a {
   font-size: 14px;
   color: #52616b;
 }
+
+@media only screen and (max-width: 450px) {
+  .article-title {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .article-description {
+    font-size: 12px;
+  }
+}
 </style>
 
 <script>

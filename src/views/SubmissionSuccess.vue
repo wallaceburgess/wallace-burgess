@@ -38,4 +38,15 @@ export default {
   border: none;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 767px) {
+  .success-header {
+    font-size: 36px;
+    margin: 25px 0;
+  }
+  .back-home {
+    font-size: 16px;
+    padding: 10px 40px;
+  }
+}
 </style>

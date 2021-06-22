@@ -56,6 +56,12 @@
 @media only screen and (max-width: 767px) {
   .hero-text {
     font-size: 7vw;
+    margin: 0 auto 20px auto;
+  }
+
+  .about-button {
+    font-size: 14px;
+    padding: 10px 35px;
   }
 }
 </style>

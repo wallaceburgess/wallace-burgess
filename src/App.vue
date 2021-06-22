@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header">Wallace Burgess</div>
     <div class="row">
-      <div class="nav collapse navbar-collapse" id="navbar">
+      <div class="nav">
         <div class="logo-container">
           <router-link to="/"><div class="logo">WB</div></router-link>
         </div>
