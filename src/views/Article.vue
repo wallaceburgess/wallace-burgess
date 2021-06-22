@@ -7,6 +7,11 @@
     <div class="authors-note">
       <div class="authors-note-title">Author's Note</div>
       <div class="article-description">{{ article.description }}</div>
+      <div v-if="article.link" class="article-link">
+        <br />
+        See Original Article Here:
+        <a :href="article.link">{{ article.link }}</a>
+      </div>
     </div>
     <div class="article-content">
       <div class="article-date">{{ article.date }}</div>
@@ -70,6 +75,11 @@
 .authors-note-title {
   font-size: 24px;
   margin-bottom: 10px;
+}
+
+.article-link a {
+  color: #000;
+  text-decoration: underline;
 }
 
 .article-date {

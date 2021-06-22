@@ -14,9 +14,10 @@
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
   </noscript>
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" hidden>
     <input name="name" type="text" />
     <input name="email" type="email" />
+    <input name="subject" type="text" />
     <textarea name="message"></textarea>
   </form>
   <div id="app"></div>

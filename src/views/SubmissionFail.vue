@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h1>Oops, looks like something went wrong!</h1>
+  <div class="fail-container">
+    <div class="fail-header">Uhh, that didn't work for some reason..</div>
     <router-link to="/contact">
-      <button>Back to form</button>
+      <button class="back-to-form">Back to Form</button>
     </router-link>
   </div>
 </template>
@@ -13,5 +13,29 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.fail-container {
+  height: calc(100vh - 175px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fail-header {
+  font-size: 50px;
+  color: #f0f5f9;
+  font-family: "Fjalla One", sans-serif;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.back-to-form {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  padding: 10px 50px;
+  background-color: #52616b;
+  color: #f0f5f9;
+  border: none;
+  cursor: pointer;
+}
 </style>

@@ -7,10 +7,11 @@
       method="POST"
       data-netlify-honeypot="bot-field"
       data-netlify="true"
-      @submit.prevent="handleSubmit()"
+      @submit.prevent="handleSubmit"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" value="contact" />
       <input
+        v-model="form.name"
         name="name"
         type="text"
         class="form-control single-input"
@@ -18,13 +19,23 @@
         required
       />
       <input
+        v-model="form.email"
         name="email"
         type="email"
         class="form-control single-input"
         placeholder="Your Email"
         required
       />
+      <input
+        v-model="form.subject"
+        name="subject"
+        type="text"
+        class="form-control single-input"
+        placeholder="Subject"
+        required
+      />
       <textarea
+        v-model="form.message"
         name="message"
         class="form-control large-input"
         placeholder="Message"
@@ -104,14 +115,15 @@ form {
 </style>
 
 <script>
-import axios from "axios";
-
 export default {
   name: "Contact",
   data() {
     return {
       form: {
-        contact: "",
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       },
     };
   },
@@ -124,23 +136,22 @@ export default {
         .join("&");
     },
     handleSubmit() {
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" },
-      };
-      axios.post(
-        "/contact",
-        this.encode({
-          "form-name": "contact",
+      fetch("/", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/x-www-form-urlendcoded",
+        },
+        body: this.encode({
+          "form-name": "contact-form",
           ...this.form,
+        }),
+      })
+        .then(() => {
+          this.$router.push("thanks");
         })
-          .then(() => {
-            this.$router.push("thanks");
-          })
-          .catch(() => {
-            this.$router.push("404");
-          }),
-        axiosConfig
-      );
+        .catch(() => {
+          this.$router.push("404");
+        });
     },
   },
 };
