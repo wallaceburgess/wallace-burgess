@@ -1,6 +1,6 @@
 <template>
   <div class="hero-container">
-    <div class="hero-text">Job Title. Example Text. Whatever You Want.</div>
+    <div class="hero-text">Welcome to My Portfolio</div>
     <router-link to="/about"
       ><button class="about-button">About Wallace</button></router-link
     >

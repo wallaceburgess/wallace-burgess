@@ -156,7 +156,7 @@ body {
 .hero {
   width: 100%;
   min-height: calc(100vh - 150px);
-  background-image: url("./assets/typing.jpeg");
+  background-image: url("./assets/wallacebkgd.jpeg");
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
 }
@@ -203,6 +203,11 @@ body {
 @media only screen and (max-width: 1024px) {
   .header {
     display: none;
+  }
+
+  .hero {
+    background-size: cover;
+    background-position: right;
   }
 
   .logo {
@@ -288,6 +293,11 @@ body {
     line-height: 60px;
     margin-top: 0;
     margin-left: 15px;
+  }
+
+  .hero {
+    background-image: url("./assets/wallacebkgdmobile.jpeg");
+    background-position: center;
   }
 
   .separate-links a {
