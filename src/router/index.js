@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue"
-import WritingExamples from "../views/WritingExamples.vue"
+import WritingExamples from "@/WritingExamples.vue"
 import Article from "../views/Article.vue"
 import Contact from "../views/Contact.vue"
 import SubmissionSuccess from '../views/SubmissionSuccess'
