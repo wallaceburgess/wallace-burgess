@@ -142,7 +142,7 @@ export default {
           "Content-Type": "application/x-www-form-urlendcoded",
         },
         body: this.encode({
-          "form-name": "contact-form",
+          "form-name": "contact",
           ...this.form,
         }),
       })
